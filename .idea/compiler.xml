@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EurekaServer" />
+        <module name="HystrixDashboardService" />
+        <module name="GrayGatewayService" />
+        <module name="RibbonService" />
+        <module name="FeignService" />
+        <module name="EurekaClient" />
+        <module name="HystrixService" />
+        <module name="TurbineService" />
+        <module name="GatewayService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EurekaClient" target="1.8" />
+      <module name="EurekaServer" target="1.8" />
+      <module name="FeignService" target="1.8" />
+      <module name="GatewayService" target="1.8" />
+      <module name="GrayGatewayService" target="1.8" />
+      <module name="GrayGatewayService (1)" target="1.8" />
+      <module name="HystrixDashboardService" target="1.8" />
+      <module name="HystrixService" target="1.8" />
+      <module name="RibbonService" target="1.8" />
+      <module name="TurbineService" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EurekaClient" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
+      <module name="FeignService" options="-parameters" />
+      <module name="GatewayService" options="-parameters" />
+      <module name="GrayGatewayService" options="-parameters" />
+      <module name="GrayGatewayService (1)" options="-parameters" />
+      <module name="HystrixDashboardService" options="-parameters" />
+      <module name="HystrixService" options="-parameters" />
+      <module name="RibbonService" options="-parameters" />
+      <module name="TurbineService" options="-parameters" />
+    </option>
+  </component>
+</project>

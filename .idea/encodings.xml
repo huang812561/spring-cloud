@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/EurekaClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FeignService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FeignService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GatewayService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GatewayService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GrayGatewayService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GrayGatewayService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HystrixDashboardService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HystrixService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HystrixService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RibbonService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RibbonService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TurbineService/src/main/java" charset="UTF-8" />
+  </component>
+</project>

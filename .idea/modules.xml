@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EurekaClient/EurekaClient.iml" filepath="$PROJECT_DIR$/EurekaClient/EurekaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FeignService/FeignService.iml" filepath="$PROJECT_DIR$/FeignService/FeignService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GatewayService/GatewayService.iml" filepath="$PROJECT_DIR$/GatewayService/GatewayService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GrayGatewayService/GrayGatewayService.iml" filepath="$PROJECT_DIR$/GrayGatewayService/GrayGatewayService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HystrixDashboardService/HystrixDashboardService.iml" filepath="$PROJECT_DIR$/HystrixDashboardService/HystrixDashboardService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HystrixService/HystrixService.iml" filepath="$PROJECT_DIR$/HystrixService/HystrixService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RibbonService/RibbonService.iml" filepath="$PROJECT_DIR$/RibbonService/RibbonService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TurbineService/TurbineService.iml" filepath="$PROJECT_DIR$/TurbineService/TurbineService.iml" />
+    </modules>
+  </component>
+</project>

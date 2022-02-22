@@ -1,0 +1,50 @@
+server:
+  port: 18080
+
+api:
+  gray:
+    enabled: true
+    default:
+      version: V2
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:11111/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+
+spring:
+  application:
+    name: GatewayService
+  cloud:
+    gateway:
+      routes:
+        # 方案一：版本路由
+#        - id: EurekaClient
+#          uri: lb://EUREKA-CLIENT
+#          predicates:
+#            - Path=/EurekaClient/**
+        - id: UserService
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/UserService/**
+        #方案二：配置权重+版本路由
+        - id: EurekaClient1
+          uri: grayLb://EUREKA-CLIENT
+          predicates:
+            - Path=/EurekaClient/**
+            - Weight=client,2
+        - id: EurekaClient2
+          uri: lb://EUREKA-CLIENT
+          predicates:
+            - Path=/EurekaClient/**
+            - Weight=client,8
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
