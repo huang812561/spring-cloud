@@ -1,0 +1,11 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: order-service
+  rabbitmq:
+    host: 192.168.10.22
+    port: 5672
+    username: guest
+    password: guest

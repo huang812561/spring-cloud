@@ -3,6 +3,7 @@ package com.hgq.controller;
 import com.hgq.feign.ClientFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -20,13 +21,19 @@ import javax.annotation.Resource;
 public class UserController {
 
     @Resource
-    private ClientFeign client;
+    private ClientFeign clientFeign;
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/query")
-    public String query() {
-        String returnStr = client.hello("zhangsan");
+    @RequestMapping("/get/{name}")
+    public String get(@PathVariable("name")String name){
+        return clientFeign.get(name);
+    }
+
+
+    @RequestMapping("/query/{name}")
+    public String query(@PathVariable("name") String name) {
+        String returnStr = clientFeign.test();
         System.out.println("A-B result:" + returnStr);
         return "success ->" + returnStr;
     }
@@ -34,11 +41,10 @@ public class UserController {
     @RequestMapping("/baidu")
     public String baidu() {
         String url = "http://EUREKA-CLIENT/EurekaClient/test";
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity(url,String.class);
-        String result = responseEntity.getBody();
+        String result = clientFeign.test();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
         return result;
     }
-
 
 
 }

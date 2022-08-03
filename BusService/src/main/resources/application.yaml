@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:11111/eureka/
+
+spring:
+  application:
+    name: bus-service
+  rabbitmq:
+    host: 192.168.10.22
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+        git:
+          url: http://172.16.98.176/hgq/springcloudconfig.git
+          username: hgq
+          password: Huang8ui
+          basedir: D:\config-repo
+          force-pull: true
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'

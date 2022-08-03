@@ -20,16 +20,24 @@ public class HelloController {
     @Resource
     private RestTemplate restTemplate;
 
+    @RequestMapping("/get")
+    public String get(@RequestParam("name")String name) {
+        return "feign return = " + name;
+    }
+
     @GetMapping("/hello/{name}")
     public String hello(@PathVariable("name") String name) {
         System.out.println("8088");
+        int i = (int) (Math.random() * 10);
+        if (i % 4 > 2) {
+            throw new RuntimeException("随机异常");
+        }
         return "hello " + name + " !";
     }
 
     @PostMapping("test")
     public String test() {
         String resultStr = restTemplate.getForObject("http://www.baidu.com", String.class);
-        System.out.println(resultStr);
         return resultStr;
     }
 }

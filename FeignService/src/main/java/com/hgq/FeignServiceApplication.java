@@ -41,7 +41,7 @@ public class FeignServiceApplication {
                 .build();
         List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
         messageConverters.add(new ByteArrayHttpMessageConverter());
-        /** 解决中文乱码的converter */
+        //* 解决中文乱码的converter
         StringHttpMessageConverter stringHttpMessageConverter = new StringHttpMessageConverter(StandardCharsets.UTF_8);
         messageConverters.add(stringHttpMessageConverter);
         messageConverters.add(new ResourceHttpMessageConverter());

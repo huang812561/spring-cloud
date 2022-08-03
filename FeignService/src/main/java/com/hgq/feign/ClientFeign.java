@@ -1,22 +1,24 @@
 package com.hgq.feign;
 
+import com.hgq.config.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName com.hgq.ClientFeign
- * @Description: TODO
+ * @Description: feign接口
  * @Author: hgq
  * @Date: 2021-10-26 18:09
  * @Version: 1.0
  */
-@FeignClient(name = "EUREKA-CLIENT/EurekaClient")
+@FeignClient(value = "EUREKA-CLIENT",name = "EUREKA-CLIENT",contextId = "EUREKA-CLIENT",  path = "/EurekaClient", configuration = {FeignConfig.class})
 public interface ClientFeign {
 
-    @RequestMapping("/hello/{name}")
-    public String hello(@PathVariable("name") String name);
+    @GetMapping("get")
+    String get(@RequestParam("name") String name);
 
-    @RequestMapping("test")
-    public String test();
+    @PostMapping("test")
+    String test();
+
+
 }
